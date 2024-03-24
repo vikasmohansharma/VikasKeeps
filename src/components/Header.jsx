@@ -15,7 +15,7 @@ function Header({ isLoggedIn, onLogout , userEmail, viewprofile}) {
     if (isLoggedIn) {
       fetchUserName();
     }
-  }, [isLoggedIn]); 
+  }, [isLoggedIn]); // eslint-disable-line react-hooks/exhaustive-deps
 
    const fetchUserName = async () => {
     try {
