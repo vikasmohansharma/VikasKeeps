@@ -22,7 +22,7 @@ function Profile({showProfile, userEmail, onExit}) {
     if (showProfile) {
       fetchUserProfile();
     }
-  }, [showProfile]); 
+  }, [showProfile]);   // eslint-disable-line react-hooks/exhaustive-deps
   
   
 
