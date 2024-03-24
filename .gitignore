@@ -23,7 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 
-package.json
 
 # dotenv environment variables file
 .env
