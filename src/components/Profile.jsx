@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { isContentEditable } from "@testing-library/user-event/dist/utils";
 
 
 function Profile({showProfile, userEmail, onExit}) {
