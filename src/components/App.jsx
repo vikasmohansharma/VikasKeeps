@@ -96,7 +96,7 @@ function App() {
     if (isLoggedIn) {
       fetchData();
     }
-  }, [reRender, isLoggedIn]);
+  }, [reRender, isLoggedIn]);  // eslint-disable-line react-hooks/exhaustive-deps
 
   //Add a new note 
   async function addNote(newNote) {
