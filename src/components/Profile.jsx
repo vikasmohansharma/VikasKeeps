@@ -10,7 +10,7 @@ function Profile({showProfile, userEmail, onExit}) {
 
   const fetchUserProfile = async () => {
     try {
-      const response = await axios.post('http://localhost:4000/auth/user/profile', {userEmail});
+      const response = await axios.post('https://apiforkeeps.netlify.app/api/auth/user/profile', {userEmail});
       setuserprofile(response.data[0]); 
       console.log(response.data[0]);
     } catch (error) {

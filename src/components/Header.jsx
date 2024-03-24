@@ -19,7 +19,7 @@ function Header({ isLoggedIn, onLogout , userEmail, viewprofile}) {
 
    const fetchUserName = async () => {
     try {
-      const response = await axios.post('http://localhost:4000/auth/user', {userEmail});
+      const response = await axios.post('https://apiforkeeps.netlify.app/api/auth/user', {userEmail});
       console.log(response.data[0].user_username);
       setuserName(response.data[0].user_username); 
     } catch (error) {

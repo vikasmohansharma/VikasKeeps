@@ -19,7 +19,8 @@ input:invalid {
     background-color: #2e2e2e; 
     /* background-image: url("https://www.transparenttextures.com/patterns/grid-me.png"); */
     /* background-image: url("https://imgur.com/KBUbwc4.jpg"); */
-    background-image: url("https://imgur.com/153s4Wt.jpg"); 
+    /*background-image: url("https://imgur.com/153s4Wt.jpg");*/ 
+    background-image: url('./images/body_background.jpg');
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
   } 

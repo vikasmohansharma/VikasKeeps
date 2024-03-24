@@ -7,7 +7,8 @@ import axios from "axios";
 import Profile from "./Profile";
 
 
-const API_URL = "http://localhost:4000";
+
+const API_URL = "https://apiforkeeps.netlify.app/api";
 
 function App() {
   const [notes, setNotes] = useState([]);
