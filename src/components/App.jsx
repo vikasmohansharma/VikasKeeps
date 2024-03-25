@@ -174,6 +174,7 @@ function isValidEmail(email) {
           <CreateArea onAdd={addNote} />
           {notes.map((noteItem, index) => {
             return (
+              <div className="note-container">
               <Note
                 key={index}
                 id={index}
@@ -182,7 +183,7 @@ function isValidEmail(email) {
                 status={noteItem.datetimedetails}
                 onDelete={deleteNote}
                 onEdit={editNote}
-              />
+              /></div>
             );
           })}
         </>
