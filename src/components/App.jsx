@@ -194,7 +194,15 @@ function ProfileShower() {
             {isRegistering && (
               <input id="input_username" type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} required />
             )}
-            <button onClick={isRegistering ? handleRegister : handleLogin}><h3>{isRegistering ? 'Quick Register' : 'Login'}</h3></button>
+            <button onClick={isRegistering ? () => {
+  if (username.trim() !== '') {
+    handleRegister();
+  } else {
+    alert('Username cannot be blank');
+  }
+} : handleLogin}>
+  <h3>{isRegistering ? 'Quick Register' : 'Login'}</h3>
+</button>
           </b>
         </div>
       )}
