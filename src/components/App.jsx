@@ -202,7 +202,8 @@ function isValidEmail(email) {
             <button onClick={isRegistering ? () => {
                       if (username.trim() !== '') {
                         if (userEmail.trim() !== '') {
-                        handleRegister();
+                          userEmail && !isValidEmail(userEmail) ? alert("Please enter a valid email address") : handleRegister();
+                        
                     } else {
                       alert('Email cannot be blank');
                       }
@@ -210,7 +211,7 @@ function isValidEmail(email) {
                       alert('Username cannot be blank');
                       }
                       
-                    userEmail && !isValidEmail(userEmail) && alert("Please enter a valid email address");
+                    
                   } : handleLogin}>
               <h3>{isRegistering ? 'Quick Register' : 'Login'}</h3>
             </button>
