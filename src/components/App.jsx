@@ -200,12 +200,12 @@ function isValidEmail(email) {
               <input id="input_username" type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} required />
             )}
             <button onClick={isRegistering ? () => {
-                      {userEmail && !isValidEmail(userEmail) && alert('Please enter a valid email address.')}
                       if (username.trim() !== '') {
                       handleRegister();
                     } else {
                       alert('Username cannot be blank');
                       }
+                    userEmail && !isValidEmail(userEmail) && alert("Please enter a valid email address");
                   } : handleLogin}>
               <h3>{isRegistering ? 'Quick Register' : 'Login'}</h3>
             </button>
