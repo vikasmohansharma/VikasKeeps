@@ -5,6 +5,7 @@ import Note from "./Note";
 import CreateArea from "./CreateArea";
 import axios from "axios";
 import Profile from "./Profile";
+import { accordionActionsClasses } from "@mui/material";
 
 
 
@@ -36,7 +37,7 @@ function App() {
         fetchData();
       }
     } catch (error) {
-      alert("Invalid Username or Password");
+      alert("Invalid Email or Password");
       console.error('Error logging in:', error);
     }
   };
@@ -212,7 +213,14 @@ function isValidEmail(email) {
                       }
                       
                     
-                  } : handleLogin}>
+                  } : () => {
+                    if (userEmail.trim() !== '' || password.trim() !== '') {
+                      handleLogin();
+                      }
+                      else {
+                        alert("Email or Password cannot be blank");
+                        }
+                  }}>
               <h3>{isRegistering ? 'Quick Register' : 'Login'}</h3>
             </button>
           </b>
@@ -225,6 +233,7 @@ function isValidEmail(email) {
 }
 
 export default App;
+
 
 
   // Function to handle logout
