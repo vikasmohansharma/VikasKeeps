@@ -88,6 +88,7 @@ input:invalid {
     padding: 10px;
     width: 240px;
     overflow-wrap:break-word;
+    word-wrap: break-word;
     margin: 16px;
     float: left;
     filter: contrast(100%);
