@@ -450,34 +450,3 @@ transition: background-color 0.3s ease;
 font-size: large;
 }
 
-
-.note-container {
-  display: flex;
-  flex-direction: row;
-}
-
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-  .login-container {
-    width: 100%;
-    height: 70%;
-  }
-  .note-container {
-    flex-direction: column;
-  }
-
-}
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  .login-container {
-    width: 100%;
-    height: 50%;
-  }
-  .note-container {
-    flex-direction: column;
-  }
-}
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-    .login-container {
-      width: 100%;
-      height: 50%;
-    }
-}
