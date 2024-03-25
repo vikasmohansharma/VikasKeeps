@@ -205,6 +205,11 @@ function isValidEmail(email) {
                     } else {
                       alert('Username cannot be blank');
                       }
+                      if (userEmail.trim() !== '') {
+                      handleRegister();
+                    } else {
+                      alert('Username cannot be blank');
+                      }
                     userEmail && !isValidEmail(userEmail) && alert("Please enter a valid email address");
                   } : handleLogin}>
               <h3>{isRegistering ? 'Quick Register' : 'Login'}</h3>
