@@ -5,7 +5,6 @@ import Note from "./Note";
 import CreateArea from "./CreateArea";
 import axios from "axios";
 import Profile from "./Profile";
-import { accordionActionsClasses } from "@mui/material";
 
 
 
