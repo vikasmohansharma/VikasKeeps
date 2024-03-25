@@ -158,6 +158,11 @@ function ProfileShower() {
   setShowProfile(true);
 }
 
+function isValidEmail(email) {
+  // Regular expression for basic email format validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
   return (
     <div>
       <Header isLoggedIn={isLoggedIn} onLogout={handleLogout} userEmail={userEmail} viewprofile={ProfileShower} />
@@ -195,14 +200,15 @@ function ProfileShower() {
               <input id="input_username" type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} required />
             )}
             <button onClick={isRegistering ? () => {
-  if (username.trim() !== '') {
-    handleRegister();
-  } else {
-    alert('Username cannot be blank');
-  }
-} : handleLogin}>
-  <h3>{isRegistering ? 'Quick Register' : 'Login'}</h3>
-</button>
+                      {userEmail && !isValidEmail(userEmail) && alert('Please enter a valid email address.')}
+                      if (username.trim() !== '') {
+                      handleRegister();
+                    } else {
+                      alert('Username cannot be blank');
+                      }
+                  } : handleLogin}>
+              <h3>{isRegistering ? 'Quick Register' : 'Login'}</h3>
+            </button>
           </b>
         </div>
       )}
