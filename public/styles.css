@@ -1,325 +1,164 @@
+/* Global Reset */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  ::placeholder {
-    font-weight: bold; 
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+/* Placeholder Styling */
+::placeholder {
+  font-weight: bold;
+}
+
+/* Invalid Input Styling */
 input:invalid {
   border-color: red;
 }
-  html {
-    font-family: "Montserrat", sans-serif;
-  }
-   body {
-    background: #eee;
-    background-color: #616161;
-    background-color: #2e2e2e; 
-    /* background-image: url("https://www.transparenttextures.com/patterns/grid-me.png"); */
-    /* background-image: url("https://imgur.com/KBUbwc4.jpg"); */
-    /*background-image: url("https://imgur.com/153s4Wt.jpg");*/ 
-    background-image: url('./images/body_background.jpg');
-    background-size: 100vw 100vh;
-    background-repeat: no-repeat;
-  } 
-  header {
-/*     background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='80' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,1)'/><path d='M0 10h20z'   stroke-width='0.5' stroke='hsla(259, 36%, 3%, 1)' fill='none'/><path d='M0 30h20z'   stroke-width='0.5' stroke='hsla(340, 20%, 4%, 1)' fill='none'/><path d='M0 50h20z'   stroke-width='0.5' stroke='hsla(199, 23%, 5%, 1)' fill='none'/><path d='M0 70h20z'   stroke-width='0.5' stroke='hsla(47, 6%, 3%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,-8)' fill='url(%23a)'/></svg>");
- */ margin: auto -16px;
-    padding: 16px 32px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0066ff;
-    font-family: 'Times New Roman', Times, serif;
-  }
 
-  
-  header h1 {
-    color: black;
-    font-family: "McLaren",;
-    font-weight: bold;
-    font-size : 60px;
-    text-align: center;
-    margin: 0;
-    color: yellow;
-    /* background-image: url("https://imgur.com/w9NRLMN.jpg");
-    background-repeat: repeat;
-    background-clip:text;
-    animation: animate 15s ease-in-out infinite; */
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 900;
-  }
-
-  @keyframes animate {
-    0%, 100% {
-      background-position: left top;
-    }
-    25%{
-      background-position: right bottom;
-     }
-    50% {
-      background-position: left bottom;
-    }
-    75% {
-      background-position: right top;
-    }   
-}
-  
-  footer {
-    position: fixed;
-    text-align: center;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-  }
-  
-  footer p {
-    color: #ccc;
-    user-select: none;
-  }
-  .note {
-    background: #fff;
-    border-radius: 7px;
-    box-shadow: 0 2px 5px #ccc;
-    padding: 10px;
-    width: 240px;
-    overflow-wrap:break-word;
-    word-wrap: break-word;
-    margin: 16px;
-    float: left;
-    filter: contrast(100%);
-  }
-  .note h1 {
-    font-size: 1.1em;
-    margin-bottom: 6px;
-  }
-  .note p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-  .note h1, .note p {
-    font-size: max(1.0em, 20px);
-  }
-  div h6  {
-    font-size : 15px;
-  }
-  .note button , .save, .close {
-    position: relative;
-    float: right;
-    margin-right: 10px;
-    color: #f5ba13;
-    border: none;
-    width: 36px;
-    height: 36px;
-    cursor: pointer;
-    outline: none;
-  }
-  .note button:hover {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  form.create-note {
-    position: relative;
-    width: 480px;
-    margin: 30px auto 20px auto;
-    background: #fff;
-    padding: 15px;
-    border-radius: 7px;
-    box-shadow: 0 1px 5px rgb(138, 137, 137);
-  }
-  form.create-note ::-webkit-scrollbar {
-    display: none;
-  }
-  form.create-note input{
-    font-weight: bold;
-  }
-  form.create-note input,
-  form.create-note textarea {
-    width: 100%;
-    border: none;
-    padding: 4px;
-    outline: none;
-    font-size: max(1.2em, 25px);
-    font-family: inherit;
-    resize: none;
-  }
-  form.create-note button {
-    position: absolute;
-    right: 18px;
-    bottom: -18px;
-    background: #f5ba13;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    outline: none;
-  }
-form.create-note button:hover {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+/* Fonts */
+html {
+  font-family: "Montserrat", sans-serif;
 }
 
-
-
- 
-  
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+/* Body Styling */
+body {
+  background: #2e2e2e url('./images/body_background.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
-textarea {
-  border: none;
-}
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
+/* Header Styling */
+header {
   margin: auto;
-  padding: 20px; /* Increased padding for better spacing */
-  border: 1px solid #888;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0066ff;
+  font-family: 'Times New Roman', Times, serif;
+  position: relative;
+}
+
+/* Header Title Styling */
+header h1 {
+  color: yellow;
+  font-size: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+/* Footer Styling */
+footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  color: #ccc;
+}
+
+/* Note Styling */
+.note {
+  background: #fff;
   border-radius: 7px;
-  width: 80%;
-  max-width: 600px; /* Added maximum width for better responsiveness */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* Retained box shadow */
-  font-family: Arial, sans-serif; /* Changed font for better readability */
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s;
-}
-
-/* Add Animation */
-@-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
-  to {top:0; opacity:1}
-}
-
-@keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
-}
-
-/* The Close Button */
-.close {
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-
-.save {
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.save:hover,
-.save:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-
-.show {
-  display : block;
-}
-.hide {
-  display : none;
-}
-.modaltitlefield {
-  width: 100%;
+  box-shadow: 0 2px 5px #ccc;
   padding: 10px;
-  margin-bottom: 10px;
-  border: none; 
-  box-sizing: border-box;
-  font-size : 20px;
-  font-weight : bold;
-}
-.modalcontentfield {
-  width: 100%;
-  height: 100px;
-  padding: 10px;
-  margin-bottom: 10px;
-  resize: none; /* Allows vertical resizing */
-  box-sizing: border-box;
-  font-size : 14px;
-  border: none;
-}
-.modalcontentfield, .modaltitlefield {
-  font-size: 20px;
+  max-width: 100%;
+  margin: 16px;
+  overflow-wrap: break-word;
 }
 
-.modaltitlefield:focus,
-.modalcontentfield:focus
- {
+/* Note Title Styling */
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+
+/* Note Content Styling */
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}
+
+/* Note Button Styling */
+.note button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  color: #f5ba13;
   border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
   outline: none;
 }
 
+/* Create Note Form Styling */
+form.create-note {
+  position: relative;
+  width: 90%;
+  max-width: 480px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
 
+/* Create Note Input Styling */
+form.create-note input,
+form.create-note textarea {
+  width: calc(100% - 8px);
+  margin-bottom: 10px;
+  padding: 10px;
+  outline: none;
+  font-size: max(1.2em, 25px);
+  font-family: inherit;
+  resize: none;
+  border: 1px solid #ccc;
+}
 
+/* Create Note Button Styling */
+form.create-note button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #f5ba13;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
 
+/* Login/Register Form Styling */
 .login-container {
-  max-width: 400px;
+  max-width: 90%;
   margin: 100px auto;
   padding: 20px;
   background-color: transparent;
   border-radius: 8px;
-/*   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
- */}
-
-.login-container h2 {
-  margin-bottom: 20px;
-  text-align: center;
-  color: #333;
 }
 
+/* Login/Register Input Styling */
 .login-container input[type="text"],
 .login-container input[type="email"],
 .login-container input[type="password"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  font-size: large;
-  outline: none;
   border: none;
   border-bottom: 1px solid lightslategray;
   background-color: transparent;
+  outline: none;
 }
 
+/* Login/Register Button Styling */
 .login-container button {
   width: 100%;
   background-color: #3385ff;
@@ -333,119 +172,32 @@ textarea {
   font-size: large;
 }
 
-.login-container button.register-btn {
-  background-color: #3385ff;
-}
-
+/* Login/Register Button Hover Styling */
 .login-container button:hover {
   background-color: #0047b3;
 }
 
-.login-container button.register-btn:hover {
-  background-color: #2980b9;
-}
-header button {
-  position: absolute;
-  background-color:  #4caf50;;
-  color: white;
-  padding: 14px 0;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: large;
-  right : 10px;
-  top : 30px;
-  font-weight: bold;
-  padding-left: 10px;
-  padding-right: 10px;
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 768px) {
+  header h1 {
+      font-size: 3rem;
+  }
+  
+  .note {
+      width: 90%;
+  }
+  
+  form.create-note {
+      width: 90%;
+  }
 }
 
-.special {
-  background-color: blue;
-}
-
-/*  Horizontal  */
-.tabs {
-  display: flex;
-}
-
-.tabs button {
-  flex: 1;
-  padding: 10px;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background-color: #99b3ff;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-  border-radius: 0;
-}
-
-.tabs button.active {
-  background-color: darkslategray;
-}
-
-::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
-}
-
-/* Style the scrollbar thumb */
-::-webkit-scrollbar-thumb {
-  background-color: #888; /* Color of the thumb */
-  border-radius: 6px; /* Rounded corners */
-}
-
-/* Style the scrollbar track on hover */
-::-webkit-scrollbar-track:hover {
-  background-color: #f0f0f0; /* Color of the track on hover */
-}
-
-/* Style the scrollbar thumb on hover */
-::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Color of the thumb on hover */
-}
-
-
-.logoutmodalcontent {
-  top: 120px;
-  background-color: transparent;
-  text-decoration: underline;
-  color: red;
-}
-.viewprofilemodalcontent {
-  right : 100px;
-  top : 120px;
-  background-color: transparent;
-  text-decoration: underline;
-  color: red;
-}
-
- 
-
-
-
-.logoutdiv {
-background-color: #ffff00;
-}
-
-.profilecontainer {
-  max-width: 400px;
-  margin: 100px auto;
-  padding: 20px;
-  background-color: transparent;
-  border-radius: 8px; 
-}
-.profilecontainer button {
-  width: 100%;
-  background-color: #3385ff;
-  color: white;
-  padding: 14px 0;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: large;
+@media only screen and (max-width: 480px) {
+  header h1 {
+      font-size: 2.5rem;
+  }
+  
+  form.create-note {
+      width: 95%;
+  }
 }
